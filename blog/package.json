@@ -2,9 +2,11 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start":" nodemon --inspect index.js",
+    "beautiful":"prettier --write --single-quote --trailing-comma all 'src/**/*.{js,json,scss}",
+    "start": " nodemon --inspect src/index.js",
+    "watch": "sass --watch --no-source-map src/resources/scss:src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,9 +20,15 @@
   },
   "homepage": "https://github.com/PhanDuc2k3/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.9",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8"
   }
 }
